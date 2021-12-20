@@ -15,7 +15,7 @@ cron() {
   mkdir -p $top
   acme.sh --install-cert -d $top --cert-file $top/cert.pem --key-file $top/key.pem --fullchain-file $top/fullchain.pem
   cat $top/fullchain.pem $top/key.pem > $top/$top.pem
-  #reload services
+  #restart services
   systemctl restart haproxy #load balancer
   systemctl restart ocserv  #openconnect-server
 }
