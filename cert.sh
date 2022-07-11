@@ -1,7 +1,7 @@
 #!/bin/bash
 
 init() {
-  curl https://get.acme.sh | sh -s email=dequanzhang1995@hotmail.com
+  curl https://get.acme.sh | sh -s email=example.com
 }
 
 acme.sh() {
@@ -10,7 +10,7 @@ acme.sh() {
 
 cron() {
   #renew certs
-  top=uxui.win
+  top=example.com
   acme.sh --issue --standalone -d $top -d www.$top -d vpn.$top
   mkdir -p $top
   acme.sh --install-cert -d $top --cert-file $top/cert.pem --key-file $top/key.pem --fullchain-file $top/fullchain.pem
