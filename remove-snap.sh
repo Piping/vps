@@ -18,7 +18,7 @@ EOF
 
 sudo add-apt-repository ppa:mozillateam/ppa
 sudo apt-get update
-sudo apt-get install firefox-esr firefox-esr-locale-zh
+sudo apt-get install firefox-esr firefox-esr-locale-zh-hans
 
 # optional install chromium browser
 cat <<EOF | sudo tee /etc/apt/preferences.d/pin-xalt7x-chromium-deb-vaapi
